@@ -1,0 +1,38 @@
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="watchsection" class="align-items-start">
+        <div class="row">
+            <div id="videocolumn">
+                <div *ngIf="videos">
+                    <youtube-player videoId={{videos[0].key}} suggestedQuality="highres" [height]="375" [width]="665"></youtube-player>
+                </div>
+            </div>
+            <div id="detailscolumn" class="col ml-4">
+                <div *ngIf="details">
+                <div class="row">
+                    <p id="tvtitle" class="text-light font-weight-light">{{details.title}}</p>
+                </div>
+                <div class="row">
+                    <p id="tvtagline" class="text-light font-weight-light font-italic mt-1">{{details.tagline}}</p>
+                </div>
+                <div class="row">
+                    <p id="tvinfo" class="text-light font-weight-light mt-4">{{details.release_date}} | <i class="fas fa-star"></i>{{details.vote_average}} | {{details.runtime}} mins</p>
+                </div>
+                <div class="row">
+                    <div class="text-light font-weight-light tvgenres mt-3">Genres:&nbsp;</div> <div class="text-light font-weight-light tvgenres mt-3" *ngFor="let cur of details.genres; index as i">{{cur.name}}&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="text-light font-weight-light tvlanguages mt-2">Spoken Languages:&nbsp;</div> <div class="text-light font-weight-light tvlanguages mt-2" *ngFor="let cur of details.spoken_languages; index as i">{{cur.english_name}}&nbsp;</div>
+                </div>
+                <div class="row">
+                    <button type="button" class="btn btn-primary mt-4" (click)="watch()">Add to Watchlist</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+        </div>
+</div>

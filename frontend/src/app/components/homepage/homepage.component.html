@@ -1,0 +1,109 @@
+<app-frontpage-carousel></app-frontpage-carousel>
+
+<div class="container-flex">
+<div class="homepagerows row mt-5 ml-5 pl-5">
+    <div class="col d-flex justify-content-left">
+        <h1 class="text-light">Popular Movies</h1>
+    </div>
+</div>
+
+<div class="homepagerows row mt-4 ml-4 pl-5">
+    <div class="col d-flex justify-content-left">
+        <ngb-carousel id="popmcarousel" *ngIf="popularMovies">
+            <ng-template ngbSlide *ngFor="let sixlist of popularMovies; index as i">
+                <div class="row justify-content-center">
+                <div *ngFor="let cur of sixlist; index as j">
+                    <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie=true></app-poster-card>
+                </div>
+                </div>
+
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+
+<div class="homepagerows row mt-5 ml-5 pl-5">
+    <div class="col d-flex justify-content-left">
+        <h1 class="text-light">Top Rated Movies</h1>
+    </div>
+</div>
+
+<div class="homepagerows row mt-4 ml-4 pl-5">
+    <div class="col d-flex justify-content-left">
+        <ngb-carousel id="topmcarousel" *ngIf="topRatedMovies">
+            <ng-template ngbSlide *ngFor="let sixlist of topRatedMovies; index as i">
+                <div class="row justify-content-center">
+                <div *ngFor="let cur of sixlist; index as j">
+                    <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie=true></app-poster-card>
+                </div>
+                </div>
+
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+
+<div class="homepagerows row mt-5 ml-5 pl-5">
+    <div class="col d-flex justify-content-left">
+        <h1 class="text-light">Popular TV Shows</h1>
+    </div>
+</div>
+
+<div class="homepagerows row mt-4 ml-4 pl-5">
+    <div class="col d-flex justify-content-left">
+        <ngb-carousel id="poptcarousel" *ngIf="popularTV">
+            <ng-template ngbSlide *ngFor="let sixlist of popularTV; index as i">
+                <div class="row justify-content-center">
+                <div *ngFor="let cur of sixlist; index as j">
+                    <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie=false></app-poster-card>
+                </div>
+                </div>
+
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+
+<div class="homepagerows row mt-5 ml-5 pl-5">
+    <div class="col d-flex justify-content-left">
+        <h1 class="text-light">Top Rated TV Shows</h1>
+    </div>
+</div>
+
+<div class="homepagerows row mt-4 ml-4 pl-5">
+    <div class="col d-flex justify-content-left">
+        <ngb-carousel id="toptcarousel" *ngIf="topRatedTV">
+            <ng-template ngbSlide *ngFor="let sixlist of topRatedTV; index as i">
+                <div class="row justify-content-center">
+                <div *ngFor="let cur of sixlist; index as j">
+                    <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie=false></app-poster-card>
+                </div>
+                </div>
+
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+
+<div class="homepagerows row mt-5 ml-5 pl-5">
+    <div class="col d-flex justify-content-left">
+        <h1 class="text-light">Trending TV Shows</h1>
+    </div>
+</div>
+
+<div class="homepagerows row mt-4 ml-4 pl-5">
+    <div class="col d-flex justify-content-left">
+        <ngb-carousel id="trendingtcarousel" *ngIf="trendingTV">
+            <ng-template ngbSlide *ngFor="let sixlist of trendingTV; index as i">
+                <div class="row justify-content-center">
+                <div *ngFor="let cur of sixlist; index as j">
+                    <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie=false></app-poster-card>
+                </div>
+                </div>
+
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+</div>
+<br/>

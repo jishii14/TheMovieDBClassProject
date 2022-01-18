@@ -1,0 +1,41 @@
+img:hover {
+    transform: scale(1.02);
+}
+
+#cardwrapper {
+    position:relative;
+    width:200px;
+    margin:10px;
+}
+
+.carouselimg {
+    width:200px;
+    height:auto;
+    margin:15px;
+    padding:0;
+}
+
+.carouselgradient {
+    width:206px;
+    height:40px;
+    z-index:1;
+    position:absolute;
+    opacity:98%;
+    left:5.5%;
+    top:88%;
+    background-image:linear-gradient(to bottom,#080808, black);
+}
+
+.carouseltopgrad {
+    width:206px;
+    height:40px;
+    z-index:1;
+    position:absolute;
+    left:5.5%;
+    top:88%;
+    opacity:94%;
+    background-image:linear-gradient(to bottom,#080808, black);
+}
+h6 {
+    font-size:15px;
+}

@@ -1,0 +1,13 @@
+<h1 id="noitems" class="text-light text-center" *ngIf="!show">No items found in Watchlist.</h1>
+<div *ngIf="show">
+    <div class="row">
+        <h1 id="items" class="text-light" *ngIf="show">My WatchList</h1>
+    </div>
+    <div id="imagerow" class="row mt-4">
+        <div *ngFor="let cur of images; index as i">
+            <app-poster-card id="{{cur.id}}" title="{{cur.title}}" poster_path="{{cur.poster_path}}" is_movie="{{cur.is_movie}}"></app-poster-card>
+        </div>
+    </div>
+    <br/>
+    <br/>
+</div>

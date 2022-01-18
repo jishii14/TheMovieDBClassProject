@@ -1,0 +1,16 @@
+<br/>
+<br/>
+<br/>
+<div id="cwrap" class="d-flex justify-content-center">
+<ngb-carousel id="caruso" (mouseover)="carouselhover(true)" (mouseout)="carouselhover(false)" *ngIf="currentMovies">
+    <ng-template ngbSlide *ngFor="let cur of currentMovies; index as i">
+        <div class="carouseltopgrad" *ngIf="show"></div>
+        <div class="carouselgradient" *ngIf="show">
+            <h6 class="text-light ml-5">{{cur.title}}</h6>
+        </div>
+        <a routerLink="/watch/movie/{{cur.id}}">
+            <img class="carouselimg d-block img-fluid" [src]="cur.backdrop_path">
+        </a>
+    </ng-template>
+</ngb-carousel>
+</div>

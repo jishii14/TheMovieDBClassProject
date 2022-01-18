@@ -1,0 +1,41 @@
+#watchsection {
+    width:72%;
+    margin-left:20%;
+    height:auto;
+}
+#tvtitle {
+    font-size:2.8em;
+    margin:0;
+    padding:0;
+}
+#tvtagline {
+    font-size:1.2em;
+    margin:0;
+    padding:0;
+    line-height: 1.5em;
+}
+#tvinfo {
+    font-size:1.2em;
+    margin:0;
+    padding:0;
+    line-height: 1.5em;
+}
+.tvgenres {
+    font-size:1em;
+    margin:0;
+    padding:0;
+    line-height: 1em;
+}
+.tvlanguages {
+    font-size:1em;
+    margin:0;
+    padding:0;
+    line-height: 1em;
+}
+#detailscolumn {
+    max-width:25em;
+    line-height: 3.5em;
+}
+i {
+    font-size:0.7em;
+}

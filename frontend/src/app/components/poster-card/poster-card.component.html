@@ -1,0 +1,10 @@
+<div id="cardwrapper">
+<div *ngIf="show">
+<div class="carouseltopgrad"></div>
+<div class="carouselgradient">
+    <h6 class="text-light ml-5">{{title}}</h6>
+</div>
+</div>
+<a routerLink="/watch/{{link}}/{{id}}">
+    <img class="carouselimg d-block img-fluid" (mouseover)="carouselhover(true)" (mouseout)="carouselhover(false)" [src]="poster_path">
+</a>
